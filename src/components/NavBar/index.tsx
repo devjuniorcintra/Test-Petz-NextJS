@@ -23,28 +23,22 @@ export default function Navbar({ display = false, text }: Props) {
           description: "Recupere seus pokémons em 5 segundos",
         };
         break;
-      default:
-        return {
-          title: "",
-          description: "",
-        };
-        break;
     }
   };
 
   return (
-    <Container display={display}>
+    <Container display={display} data-testid="navbar-container">
       <BreadCrumb>
         <Link href="/">
           <Item>Home</Item>
         </Link>
         <Item>{">"}</Item>
         <Link href={text}>
-          <Item display={display}>{handleTitlePage().title}</Item>
+          <Item display={display}>{handleTitlePage()?.title}</Item>
         </Link>
       </BreadCrumb>
-      <TitlePage>{handleTitlePage().title}</TitlePage>
-      <Description>{handleTitlePage().description}</Description>
+      <TitlePage>{handleTitlePage()?.title}</TitlePage>
+      <Description>{handleTitlePage()?.description}</Description>
     </Container>
   );
 }

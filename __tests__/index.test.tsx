@@ -3,6 +3,7 @@ import { render, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import LogoButton from "../src/components/LogoButton";
 import "@testing-library/jest-dom";
+import Navbar from "../src/components/NavBar";
 
 jest.useFakeTimers();
 
@@ -36,6 +37,20 @@ describe("LogoButton component", () => {
 
     expect(screen.getByText("Centro Pokémon")).toHaveStyle({
       display: "block",
+    });
+  });
+});
+
+describe("Navbar component", () => {
+  it("deve renderizar o componente com as informações corretas", () => {
+    const display = true;
+    const text = "/quemSomos";
+
+    render(<Navbar display={display} text={text} />);
+
+    // Verifica se o estilo display é 'flex'
+    expect(screen.getByTestId("navbar-container")).toHaveStyle({
+      display: "flex",
     });
   });
 });
