@@ -27,6 +27,10 @@ import api from "../../services";
 
 import Modal from "react-modal";
 import { inter } from "../../styles/fonts";
+import Image from "next/image";
+
+import WarningSVG from "../../assets/images/warning.svg";
+import CheckSVG from "../../assets/images/check.svg";
 
 export default function AgendarConsulta() {
   const [dataOptions, setDataOptions] = useState([]);
@@ -393,6 +397,11 @@ export default function AgendarConsulta() {
         <TitleModal className={inter.className}>
           {formVerification.title}
         </TitleModal>
+        <Image
+          priority
+          src={formVerification.type === "Error" ? WarningSVG : CheckSVG}
+          alt="Logo Pokémon"
+        />
         <MessageModal className={inter.className}>
           {formVerification.message}
         </MessageModal>
