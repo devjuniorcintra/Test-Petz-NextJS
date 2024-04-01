@@ -20,6 +20,7 @@ export const Form = styled.form`
   flex-direction: column;
   gap: 32px;
   width: 550px;
+  margin: 32px 0;
 `;
 
 export const Line = styled.div`
@@ -94,4 +95,85 @@ export const Description = styled.span`
   font-size: 12px;
   line-height: 14px;
   color: ${({ theme }) => theme.colors.black};
+`;
+
+export const PokemonLine = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 38px;
+`;
+
+export const NewPokemonButton = styled.button`
+  width: 253px;
+  height: 42px;
+  border-radius: 30px;
+  border: 1px solid #1d1d1d;
+  padding: 13px 14px;
+  background-color: transparent;
+`;
+
+export const Divider = styled.div`
+  width: 100%;
+  height: 1px;
+  background-color: #d5d5d5;
+  margin: 32px 0;
+`;
+
+export const LineInfo = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+export const LabelInfo = styled.span`
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #747474;
+`;
+
+export const Total = styled.span`
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  color: #1d1d1d;
+`;
+
+export const ButtonSchedule = styled.button`
+  width: 183px;
+  height: 42px;
+  background-color: ${({ theme }) => theme.colors.red};
+  color: ${({ theme }) => theme.colors.white};
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+`;
+
+export const TitleModal = styled.span`
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: #1d1d1d;
+`;
+
+export const MessageModal = styled.span`
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #747474;
+`;
+
+export const ButtonModal = styled.button`
+  width: 197px;
+  height: 42px;
+  background-color: ${({ theme }) => theme.colors.red};
+  color: ${({ theme }) => theme.colors.white};
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
 `;

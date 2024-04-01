@@ -9,17 +9,21 @@ type Props = {
   }[];
   placeholder: string;
   onChange: (value: any) => void;
+  width?: number;
+  value: any;
 };
 
 export default function CustomSelect({
   options,
   placeholder,
   onChange,
+  width = 265,
+  value,
 }: Props) {
   const colourStyles: StylesConfig = {
     control: (styles) => ({
       ...styles,
-      width: 265,
+      width: width,
       backgroundColor: "#fff",
       color: "#000",
       borderWidth: 1,
@@ -29,7 +33,7 @@ export default function CustomSelect({
     option: (styles) => {
       return {
         ...styles,
-        width: 265,
+        width: width,
         backgroundColor: "#fff",
         color: "#000",
         borderWidth: 1,
@@ -48,6 +52,7 @@ export default function CustomSelect({
       styles={colourStyles}
       placeholder={placeholder}
       onChange={onChange}
+      value={value}
     />
   );
 }

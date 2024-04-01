@@ -8,7 +8,7 @@ type Props = {
   text: string;
 };
 
-export default function Navbar({ display, text }: Props) {
+export default function Navbar({ display = false, text }: Props) {
   const handleTitlePage = () => {
     switch (text) {
       case "/quemSomos":
