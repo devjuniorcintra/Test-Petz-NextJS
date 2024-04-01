@@ -1,8 +1,8 @@
 import styled, { css } from "styled-components";
 
 export const Container = styled("button")<{ open: boolean }>`
-  background-color: ${({ theme }) => theme.colors.red};
-  color: ${({ theme }) => theme.colors.white};
+  background-color: #e40f0f;
+  color: #fff;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -49,7 +49,7 @@ export const Container = styled("button")<{ open: boolean }>`
 `;
 
 export const Title = styled("span")<{ open: boolean }>`
-  color: ${({ theme }) => theme.colors.white};
+  color: #fff;
   font-size: 20px;
   line-height: 24px;
   font-weight: 600;
